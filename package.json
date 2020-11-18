@@ -32,7 +32,8 @@
     "lint:format": "prettier --config ./linting/prettier.config.js --write",
     "cy:open": "cypress open --config-file e2e/cypress.json",
     "cy:closed": "cypress run --config-file e2e/cypress.json",
-    "addDevCerts": "./utils/tooling/generateCerts.sh"
+    "addDevCerts": "./utils/tooling/generateCerts.sh",
+    "generate": "graphql-codegen --config ./codegen.yml"
   },
   "sideEffects": false,
   "repository": {
@@ -73,6 +74,14 @@
     "webpack": "^4.43.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "1.19.2",
+    "@graphql-codegen/fragment-matcher": "2.0.0",
+    "@graphql-codegen/introspection": "1.18.0",
+    "@graphql-codegen/typescript": "^1.17.11",
+    "@graphql-codegen/typescript-document-nodes": "1.17.8",
+    "@graphql-codegen/typescript-graphql-files-modules": "1.18.0",
+    "@graphql-codegen/typescript-operations": "1.17.10",
+    "@graphql-codegen/typescript-react-apollo": "2.1.1",
     "@storybook/addon-actions": "^6.0.28",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-knobs": "^6.0.28",
@@ -98,9 +107,9 @@
     "cypress": "^5.5.0",
     "cypress-cucumber-preprocessor": "^4.0.0",
     "eslint": "^7.12.1",
-    "eslint-plugin-i18next": "^5.0.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-i18next": "^5.0.0",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
